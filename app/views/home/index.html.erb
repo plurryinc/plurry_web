@@ -19,10 +19,7 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    <a class="page-scroll" href="#product">Product</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#about">About</a>
@@ -33,6 +30,18 @@
                 <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li>
+                <% if signed_in? %>
+                <li>
+                  <a href="/dashboard">Dashboard</a>
+                </li>
+                <li>
+                  <a data-method="delete" href="/users/sign_out">Log out</a>
+                </li>
+                <% else %>
+                <li>
+                  <a href="/users/sign_in">Login</a>
+                </li>
+                <% end %>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -44,19 +53,19 @@
 <header>
     <div class="container">
         <div class="intro-text">
-            <div class="intro-lead-in">Welcome To Our Studio!</div>
+            <div class="intro-lead-in">Welcome To The Plurry!</div>
             <div class="intro-heading">It's Nice To Meet You</div>
-            <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+            <a href="#product" class="page-scroll btn btn-xl">제품 소개 보기</a>
         </div>
     </div>
 </header>
 
-<!-- Services Section -->
-<section id="services">
+<!-- Product Section -->
+<section id="product">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Services</h2>
+                <h2 class="section-heading">Product</h2>
                 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
             </div>
         </div>
@@ -408,7 +417,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <span class="copyright">Copyright &copy; Your Website 2014</span>
+                <span class="copyright">Copyright &copy; Plurry 2015</span>
             </div>
             <div class="col-md-4">
                 <ul class="list-inline social-buttons">
